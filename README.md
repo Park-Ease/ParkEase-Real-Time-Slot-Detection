@@ -1,5 +1,7 @@
 # ParkEase - Parking Slot Detection and Management - Image Processing
 
+![ParkEase Banner](./parkease-front-banner.png "ParkEase Parking Slot Management")
+
 # Introduction:
 
 This is the main Python and OpenCV code that runs to mark the parking slots, check whether a parking slot is filled and then dynamically update the slot status in the DB in real-time with the power of Prisma and WebSockets.
