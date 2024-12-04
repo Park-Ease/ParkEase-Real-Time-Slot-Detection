@@ -1,12 +1,12 @@
-### ParkEase - Parking Slot Detection and Management - Image Processing
+# ParkEase - Parking Slot Detection and Management - Image Processing
 
-## Introduction:
+# Introduction:
 
 This is the main Python and OpenCV code that runs to mark the parking slots, check whether a parking slot is filled and then dynamically update the slot status in the DB in real-time with the power of Prisma and WebSockets.
 
 ---
 
-## Key Features
+# Key Features
 - Real-Time Updates: Dynamically reflects parking slot status in the database.
 - Remote Processing: Integrates with remote EC2 instances for centralized processing.
 - Efficient Communication: Utilizes WebSockets for seamless real-time updates.
@@ -14,14 +14,14 @@ This is the main Python and OpenCV code that runs to mark the parking slots, che
 
 ---
 
-## Required Packages - Local:
+# Required Packages - Local:
 
-# Python
+## Python
 1) os - Operating/File System interactions
 2) time - Functions to manipulate time values
 3) pickle - Serializes and deserializes Python objects for storage or transfer
 
-# External
+## External
 4) watchdog - Monitors file system events such as modifications or creations
 5) paramiko - Enables secure SSH connections for remote server interactions
 6) scp - Facilitates secure file transfers over SSH
@@ -30,9 +30,9 @@ This is the main Python and OpenCV code that runs to mark the parking slots, che
 9) cvzone - High-level OpenCV functions to draw or create shapes on videos/images
 10) python-dotenv - Loads environment variables from a .env file into application settings
 
-## Required Packages - Docker Container:
+# Required Packages - Docker Container:
 
-# Python 
+## Python 
 1) os - Operating/File System interactions 
 2) pickle - Serializes and deserializes Python objects for storage or transfer 
 3) time - Functions to manipulate time values 
@@ -40,7 +40,7 @@ This is the main Python and OpenCV code that runs to mark the parking slots, che
 5) json - Parses and manipulates JSON data 
 6) typing - Provides support for type hints in Python
 
-# External
+## External
 7) fastapi - Web framework for building APIs with Python 3.6+
 8) uvicorn - ASGI server for running FastAPI applications
 9) pydantic - Data validation and settings management using Python type annotations
@@ -55,23 +55,23 @@ This is the main Python and OpenCV code that runs to mark the parking slots, che
 
 ---
 
-## Prisma Commands for MongoDB
+# Prisma Commands for MongoDB
 1) prisma init - Creates a prisma folder and a schema.prisma
 1) prisma generate - Generates the tables based on the schema
 2) prisma db push - Pushes changes in schema directly to DB
 
 ---
 
-## Docker Commands:
+# Docker Commands:
 1) docker-compose up --build - Build and start the container
 2) docker ps - See the container process status
 2) docker exec -it parking_detection bash - Open an interactive shell inside the container
 
 ---
 
-## Code Execution Flow:
+# Code Execution Flow:
 
-# Local System
+## Local System
 1) Configure the auto_transfer_pos.py Script
 - Update the auto_transfer_pos.py script with the appropriate paths, EC2 instance configurations, and SSH key details.
 
@@ -84,7 +84,7 @@ This is the main Python and OpenCV code that runs to mark the parking slots, che
 4) File Transfer
 - After completing the slot marking process, ensure the generated parkease file is saved. Wait for the file to be automatically transferred to the remote instance.
 
-# Docker Container on Remote Instance
+## Docker Container on Remote Instance
 1) Initialize the Docker Environment
 - Run the Docker commands as outlined in the setup instructions to initialize the container environment.
 
@@ -98,7 +98,7 @@ This is the main Python and OpenCV code that runs to mark the parking slots, che
 4) Run the Parking Slot Detection Script
 - In a separate shell session, execute the parking_slot_detection.py script to begin real-time parking slot detection.
 
-# Raspberry Pi
+## Raspberry Pi
 1) Get into the virtual environment inside "parkease-final" folder.
 
 2) Run the script to capture the real-time stream and transfer 5 min chunks to the AWS S3 instance.
@@ -107,27 +107,27 @@ This is the main Python and OpenCV code that runs to mark the parking slots, che
 
 ---
 
-## Testing
+# Testing
 
-# Unit Testing
+## Unit Testing
 Test individual modules and functions, such as:
 - Object serialization/deserialization using pickle.
 - Slot detection logic using test images or videos.
 - WebSocket event handling for real-time updates.
 
-# Functional Testing
+## Functional Testing
 - Verify that parking slots are marked correctly using the mark_slots.py script.
 - Test real-time slot status updates via WebSocket communication.
 
-# Integration Testing
+## Integration Testing
 - Confirm that the EC2 instance processes the parkease file correctly.
 - Ensure the init_lot_n_slots.py and WebSocket server interact as expected.
 
-# Performance Testing
+## Performance Testing
 - Test the system’s ability to handle multiple parking slots simultaneously.
 - Validate the YOLO model’s performance under varying lighting and object occlusion conditions.
 
-# System Testing
+## System Testing
 - Test the complete workflow:
 - Detect and mark parking slots using mark_slots.py.
 - Transfer the generated file to the remote EC2 instance.
@@ -136,9 +136,9 @@ Test individual modules and functions, such as:
 
 ---
 
-## Contributions
+# Contributions
 
-# How to Contribute
+## How to Contribute
 1) Fork the Repository: Clone the repository to your local machine for development.
 2) Set Up the Environment: Follow the instructions in this document to set up the local or Dockerized environment.
 3) Make Changes: Work on improvements, bug fixes, or new features.
