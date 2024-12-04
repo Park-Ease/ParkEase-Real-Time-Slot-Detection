@@ -1,0 +1,16 @@
+services:
+  parking_detection:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src
+      - ./logs:/app/logs
+      - ./prisma:/app/prisma
+    ports:
+      - "5000:5000"
+    stdin_open: true
+    tty: true         
+    restart: always
+    env_file:
+      - .env
