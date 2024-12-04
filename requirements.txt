@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pydantic
+prisma
+python-dotenv
+opencv-python
+pandas
+ultralytics 
+cvzone
+websockets
+requests
+
+
