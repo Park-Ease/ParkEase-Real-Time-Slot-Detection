@@ -8,7 +8,8 @@ This is the main Python and OpenCV code that runs to mark the parking slots, che
 
 ---
 
-# Key Features
+# Key Features:
+
 - Real-Time Updates: Dynamically reflects parking slot status in the database.
 - Remote Processing: Integrates with remote EC2 instances for centralized processing.
 - Efficient Communication: Utilizes WebSockets for seamless real-time updates.
@@ -57,7 +58,8 @@ This is the main Python and OpenCV code that runs to mark the parking slots, che
 
 ---
 
-# Prisma Commands for MongoDB
+# Prisma Commands for MongoDB:
+
 1) prisma init - Creates a prisma folder and a schema.prisma
 1) prisma generate - Generates the tables based on the schema
 2) prisma db push - Pushes changes in schema directly to DB
@@ -65,6 +67,7 @@ This is the main Python and OpenCV code that runs to mark the parking slots, che
 ---
 
 # Docker Commands:
+
 1) docker-compose up --build - Build and start the container
 2) docker ps - See the container process status
 2) docker exec -it parking_detection bash - Open an interactive shell inside the container
@@ -109,7 +112,7 @@ This is the main Python and OpenCV code that runs to mark the parking slots, che
 
 ---
 
-# Testing
+# Testing:
 
 ## Unit Testing
 Test individual modules and functions, such as:
@@ -138,7 +141,7 @@ Test individual modules and functions, such as:
 
 ---
 
-# Contributions
+# Contributions:
 
 ## How to Contribute
 1) Fork the Repository: Clone the repository to your local machine for development.
@@ -149,7 +152,8 @@ Test individual modules and functions, such as:
 
 ---
 
-# Areas to Contribute
+# Areas to Contribute:
+
 1) Documentation: Enhance or correct README.md to ensure clarity and completeness.
 2) Improvements: Suggest a better and easier execution flow for the program.
 2) Testing: Add more test cases to improve coverage and reliability.
