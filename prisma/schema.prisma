@@ -1,12 +1,10 @@
 datasource db {
   provider = "mongodb"
-  url      =  env("DATABASE_URL")
+  url      = env("DATABASE_URL")
 }
 
 generator client {
-  provider  = "prisma-client-py"
-  interface = "asyncio"
-  recursive_type_depth = 5
+  provider = "prisma-client-js"
 }
 
 model User {
@@ -38,6 +36,8 @@ model ParkingLot {
   id         String        @id @default(auto()) @map("_id") @db.ObjectId
   name       String
   location   String
+  latitude   Float         
+  longitude  Float         
   totalSlots Int
   createdAt  DateTime      @default(now())
   updatedAt  DateTime      @updatedAt
@@ -50,7 +50,7 @@ model ParkingSlot {
   lotId      String     @db.ObjectId
   lot        ParkingLot @relation(fields: [lotId], references: [id])
   slotNumber Int        
-  status     Boolean    @default(true)
+  status     Boolean    @default(true) 
   locationX  Float?
   locationY  Float?
   createdAt  DateTime   @default(now())
