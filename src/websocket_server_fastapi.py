@@ -37,7 +37,7 @@ async def lifespan(app: FastAPI):
 async def get_prisma():
     return prisma
 
-app = FastAPI()
+app = FastAPI(lifespan=lifespan)
 prisma = Prisma()
 
 # Request models

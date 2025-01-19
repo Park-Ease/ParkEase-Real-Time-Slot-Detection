@@ -1,3 +1,4 @@
 .env
 src/output/
 src/parkease
+node_modules/

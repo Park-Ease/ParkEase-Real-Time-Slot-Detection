@@ -12,10 +12,8 @@ PARKING_LOT_ID = os.getenv("PARKING_LOT_ID")
 
 # Dummy Data
 locations = [
-    {"lat": 12.281175, "long": 76.640907},
-    {"lat": 12.281155, "long": 76.640903},
-    {"lat": 12.281136, "long": 76.640898},
-    {"lat": 12.281145, "long": 76.640898},
+    {"lat": 10.281175, "long": 80.640907},
+    {"lat": 10.301155, "long": 80.640903},
 ]
 
 if not WEBSOCKET_HOST or not WEBSOCKET_PORT:
@@ -35,8 +33,8 @@ if not PARKING_LOT_ID:
         API_URL = f"http://{WEBSOCKET_HOST}:{WEBSOCKET_PORT}/create_parking_lot"
 
         payload = {
-            "name": "Docker Test Parking Lot",
-            "location": "MC PG, Vishweshwara Nagar",
+            "name": "Awesome Parking Lot",
+            "location": "New Jersey, USA",
             "total_slots": int(PARKING_SLOTS)
         }
         headers = {"Content-Type": "application/json"}

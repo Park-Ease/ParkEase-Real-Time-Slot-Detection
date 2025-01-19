@@ -7,7 +7,7 @@ from scp import SCPClient
 
 # Configuration
 LOCAL_FILE = r"D:\PROJECTS\ParkEase-Python-Backend\src\parkease"  # File to monitor
-EC2_HOST = "ec2-44-201-94-87.compute-1.amazonaws.com"  # EC2 instance public DNS
+EC2_HOST = "ec2-54-235-129-4.compute-1.amazonaws.com"  # EC2 instance public DNS
 EC2_USER = "ubuntu"  # EC2 username
 PEM_KEY_PATH = r"C:\Users\arjun\Downloads\parkease-test-free-key.pem"  # Private key path
 REMOTE_DIRECTORY = "/home/ubuntu/parkease-final/src/"  # Directory on EC2
